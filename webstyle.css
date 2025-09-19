@@ -1,0 +1,814 @@
+@font-face {
+  font-family: 'poppins-reg';
+  src: url(fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-light';
+  src: url(fonts/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "poppins-med";
+  src: url(fonts/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'poppins-bold';
+  src: url(fonts/poppins/Poppins-Bold.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 126.781px;
+}
+
+/* color palette */
+        :root {
+            --blue-1: #4e6d8f;
+            --blue-2: #CCE4FF;
+            --blue-3: #315391;
+            --blue-4: #99C9FF;
+            --blue-5: #80BCFF;
+            --blue-6: #cfcfcf;
+            --dark-blue: #3A7BCC;
+            --black: #1f1e1e;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--blue-1);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* top banner */
+        .banner {
+            background-color: var(--blue-6);
+            display: flex;
+            padding: 1rem 10rem;
+            justify-content: flex-end;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-buttons button {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button-menu {
+            padding: 0.3rem 2rem;
+            background-color: var(--blue-3);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: "poppins-reg";
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button-menu:hover {
+            background-color: var(--blue-4);
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .nav-button-home {
+            padding: 0.3rem 2rem;
+            background-color: var(--blue-3);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: "poppins-reg";
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: flex;
+            margin: 0rem 1rem 0rem 0rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button-home:hover {
+            background-color: var(--blue-4);
+            transform: translateY(-2px);
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+        }
+
+        #aboutme1:hover {
+            transform: none;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-button-drop a {
+            text-decoration: none;
+            display: block;
+            color: white;
+            background-color: var(--blue-3);
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0.3rem 2rem;
+            justify-content: center;
+            font-family: "poppins-reg";
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button-drop a:hover {
+            background-color: var(--blue-4);
+        }
+
+        .aboutme1 {
+            border-radius: 0px 5px 0px 0px;
+        }
+
+        .contact {
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        .nav-button-drop {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-button-drop .dropdown {
+            display: none;
+            width: 192px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        .nav-button-drop:hover .dropdown {
+            display: block;
+        }
+
+        /* main content */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(41, 37, 37, 0.75);
+        }
+        
+        h1 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-family: 'poppins-bold';
+            font-size: 2rem;
+        }
+        
+        h2 {
+            color: var(--black);
+            font-family: 'poppins-med';
+            border-bottom: 2px solid var(--dark-blue);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            color: aliceblue;
+            font-family: 'poppins-reg';
+        }
+
+        h4 {
+            color: #1f1e1e;
+            font-family: 'poppins-med';
+            margin: 5px;
+        }
+
+        p {
+            color:aliceblue;
+            font-family: 'poppins-light';
+        }
+
+        .pblack {
+            color: var(--black);
+            font-family: 'poppins-light';
+        }
+
+        .axelpic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--blue-3);
+            display: block;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .axelpic:hover {
+            box-shadow: 0px 3px 10px 0px rgba(41, 37, 37, 0.75);
+            transform: translateY(-3px);
+        }
+        
+        .about {
+            background-color: var(--blue-1);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--dark-blue);
+            z-index: 1;
+        }
+
+        /* About Me */
+
+        .header {
+            text-align: center;
+            border-bottom: 4px solid rgb(80, 81, 95);
+        }
+
+        /* mga logos */
+
+        #stack {
+            position: absolute;
+            z-index: 2;
+            margin-left: 47rem;
+            margin-top: 1.5rem;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: none;
+            padding: 3px 3px;
+        }
+
+        #stack:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        .schoollogos {
+            display: block;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* placement ng logos */
+
+        #roeslogo {
+            position: absolute;
+            z-index: 3;
+            margin-left: 48.40rem;
+            margin-top: 5px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        #stacklogos {
+            position: absolute;
+            z-index: 2;
+            margin-left: 55rem;
+            margin-top: 5px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        /* science interests */
+
+        .scienceint {
+            width: 120px;
+            height: 160px;
+            margin: 0 auto;
+            display: block;
+            border: 5px var(--blue-3);
+            border-radius: 5px;
+        }
+
+        .science {
+            background-color: white;
+            width: 8rem;
+            padding: 0.7rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .science:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+
+
+        .blocktext {
+            margin-bottom: 0px;
+            color: black;
+            font-size: medium;
+        }
+
+        #block {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border: none;
+            padding: 1rem;
+        }
+
+        #block1 {
+            text-align: center;
+        }
+
+        #block2 {
+            border: none;
+        }
+
+        .blockheader {
+            color: white;
+            margin: 0;
+            padding: 0;
+            border-top: 2px solid var(--blue-2);
+        }
+
+        /* resume */
+
+        .fa-envelope, .fa-house, .fa-phone {
+            font-size: 1rem;
+            color: var(--dark-blue);
+        }
+
+        .resume_top {
+            margin-top: 2rem;
+        }
+
+        .resume-pictext {
+            display: flex;
+
+        }
+
+        .resume_pic {
+            width: 9rem;
+            height:auto;
+            border: solid 4px var(--black);
+            margin-right: 1rem;
+        }
+
+        .resume_intro {
+            padding: 0;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(41, 37, 37, 0.75);
+        }
+        
+        .resume-section h2 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-family: 'poppins-bold';
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--dark-blue);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 1rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .education-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-year {
+            min-width: 120px;
+            font-weight: bold;
+            color: var(--dark-blue);
+        }
+        
+        .education-details {
+            flex: 1;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skill-category h3 {
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+            font-family: 'poppins-med';
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eaeaea;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .achievement-item {
+            background: var(--blue-2);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--dark-blue);
+        }
+        
+        @media (max-width: 768px) {
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .education-year {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* projects */
+
+        #wix img {
+            width: 700px;
+            height: auto;
+        }
+
+        #secondblocks img {
+            width: 250px;
+            height: auto; 
+        }
+
+
+        /* skills */
+
+        #skillscontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #skillssection {
+            width: fit-content;
+            display: grid;
+            margin: 0 7rem;
+            text-align: center;
+        }
+
+        .skillstable table {
+            border-collapse: collapse;
+            font-family: "poppins-med";
+        }
+
+        .skillstable table th,
+        .skillstable table td {
+            border: 2px solid;
+            padding: 1rem;
+            text-align: center;
+            margin: none;
+            border-color: var(--blue-3)
+        }
+
+        /* extracurriculars */
+
+        #extra_sec {
+            width: auto;
+            height: auto;
+            padding: 1rem;
+            margin: 0.5rem;
+        }
+
+        #extra {
+            width: 180px;
+            height: auto;
+        }
+
+        .extra_info h3 {
+            font-size: 1rem;
+            padding: none;
+            margin: 2px;
+            text-align: left;
+        }
+
+        /* gallery */
+
+        .gallery_button {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .gallery_button .design_works {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .gallery_div div {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        /* contact form */
+
+        .contactme {
+            border-bottom: 2px solid var(--black);
+            
+        }
+
+        .forms {
+            text-align: center;
+        }
+
+        .formint {
+            height: 2rem;
+            width: 20rem;
+            border-color:#80BCFF;
+            border-radius: 8px;
+            border-width: 2px;
+            border-style: solid;
+            padding-left: 15px;
+            margin: 1px;
+        }
+
+        .formmess {
+            height: 4rem;
+            width: 20rem;
+            border-color:#80BCFF;
+            border-radius: 8px;
+            border-style: solid;
+            padding-left: 15px;
+            margin: 1px;
+            border-width: 2px;
+        }
+
+        .formcont {
+            width: 700px;
+            display: grid;
+            margin: 0 7rem;
+        }
+
+        .sendbutton {
+            background-color: var(--blue-3);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: "poppins-reg";
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            padding: 0.2rem 1rem;
+            margin: 0 0 5px 0;
+        }
+
+        .sendbutton:hover {
+            background-color: var(--blue-4);
+            transform: translateY(-2px);
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        /* contact icons */
+
+        .fa-square-instagram {
+            font-size: 2.3rem;
+            color: var(--dark-blue);
+        }
+
+        .fa-square-facebook {
+            font-size: 2.3rem;
+            color: var(--dark-blue);
+        }
+
+        .fa-square-pinterest {
+            font-size: 2.3rem;
+            color: var(--dark-blue);
+        }
+
+        .fa-square-github {
+            font-size: 2.3rem;
+            color: var(--dark-blue);
+        }
+
+        .logossocmed a {
+            text-decoration: none;
+        }
+
+        .logossocmed a:hover {
+            cursor: pointer;
+        }
+
+        .star {
+            color: var(--dark-blue);
+            font-size: 20rem;
+            z-index: 2;
+            position: absolute;
+            transform: rotate(127deg);
+            margin-top: 7rem;
+            margin-left: 36rem;
+            text-shadow:
+            -1.5px -1.5px 0 var(--blue-6), 
+            1.5px -1.5px 0 var(--blue-6),
+            -1.5px 1.5px 0 var(--blue-6),
+            1.5px 1.5px 0 var(--blue-6);
+        }
+
+
+@media screen and (max-width: 1200px) {
+    .banner {
+        padding: 1rem 5rem;
+    }
+    
+    #stack, #roeslogo, #stacklogos {
+        position: relative;
+        margin: 0.5rem auto;
+        display: block;
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+    
+    .star {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner {
+        padding: 1rem 2rem;
+        justify-content: center;
+    }
+    
+    .nav-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    #stack, #roeslogo, #stacklogos {
+        margin-left: 0;
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 1rem auto;
+    }
+}
+
+/* tablet styles */
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 1rem;
+    }
+    
+    .nav-button-home, .nav-button-menu {
+        padding: 0.3rem 1.5rem;
+        font-size: 14px;
+    }
+    
+    .nav-button-drop .dropdown {
+        width: 160px;
+    }
+    
+    .nav-button-drop a {
+        padding: 0.3rem 1.5rem;
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* school logos adjustment */
+
+    #stacklogos {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .schoollogos {
+        width: 70px;
+        height: 70px;
+        margin: 0 0.5rem;
+    }
+    
+    /* science interests grid adjustment */
+
+    #block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .science {
+        width: 7rem;
+        margin: 1rem;
+    }
+    
+    /* form adjustments */
+
+    .formcont {
+        width: auto;
+        margin: 0 2rem;
+    }
+    
+    .formint, .formmess {
+        width: 100%;
+    }
+    
+    /* resume styles */
+    
+    .resume-pictext {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .resume_pic {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .education-item {
+        flex-direction: column;
+    }
+    
+    .education-year {
+        margin-bottom: 0.5rem;
+        min-width: auto;
+    }
+    
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
